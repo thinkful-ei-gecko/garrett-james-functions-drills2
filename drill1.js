@@ -5,6 +5,10 @@ function createGreeting(name = 'Garrett', age = 31) {
   return greeting;
 }
 
+function getYearOfBirth(age) {
+  const yearOfBirth = 2019 - age;
+  return `I was born in ${yearOfBirth}`;
+}
 const greet = createGreeting();
 console.log(greet);
 

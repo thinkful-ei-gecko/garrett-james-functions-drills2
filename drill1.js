@@ -1,6 +1,9 @@
 'use strict';
 
-function createGreeting(name = 'Garrett', age = 31) {
+function createGreeting(name, age) {
+  if (!age || !name) {
+    throw new Error('Arguments not valid');
+  }
   const greeting = `Hi my ${name} is Garrett and I'm ${age} years old`;
   return greeting;
 }

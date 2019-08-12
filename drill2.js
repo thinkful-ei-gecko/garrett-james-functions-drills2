@@ -44,6 +44,21 @@ function daysInMonth (month, leapYear) {
     }
 }
 
-console.log(daysInMonth('february', true));
-console.log(daysInMonth('april'));
-console.log(daysInMonth('january'));
+function rpsGame(num) {
+    // 1 = rock
+    // 2 = paper
+    // 3 = scissors
+    if(num < 1 || num > 3) {
+        throw new Error('Please choose either 1 2 or 3');
+    }
+    const randomNo = Math.floor(Math.random() * 3) + 1;
+    if(randomNo === num) {
+        return 'The game ended in a tie!';
+    } else if ((num === 1 & randomNo === 3) || (num === 3 && randomNo === 1)) {
+        return 'Rock beats scissors';
+    } else if ((num === 2 & randomNo === 3) || (num === 3 && randomNo === 2)) {
+        return 'Scissors beats paper';
+    } else if ((num === 2 & randomNo === 1) || (num === 1 && randomNo === 2)) {
+        return 'Paper beats rock';
+    }
+}

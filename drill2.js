@@ -27,3 +27,23 @@ function decode (word) {
         return '';
     }
 }
+
+function daysInMonth (month, leapYear) {
+    switch (month) {
+        case 'february':
+            return leapYear ? `${month} has 29 days` : `${month} has 28 days`;
+            break;
+        case 'september':
+        case 'april':
+        case 'june':
+        case 'november':
+            return `${month} has 30 days`;
+            break;
+        default:
+            return `${month} has 31 days`;
+    }
+}
+
+console.log(daysInMonth('february', true));
+console.log(daysInMonth('april'));
+console.log(daysInMonth('january'));
